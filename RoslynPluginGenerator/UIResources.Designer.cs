@@ -19,7 +19,7 @@ namespace SonarQube.Plugins.Roslyn {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class UIResources {
@@ -102,6 +102,15 @@ namespace SonarQube.Plugins.Roslyn {
         public static string APG_GeneratingRules {
             get {
                 return ResourceManager.GetString("APG_GeneratingRules", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The specified rules xml file is invalid: {0}.
+        /// </summary>
+        public static string APG_InvalidRulesFile {
+            get {
+                return ResourceManager.GetString("APG_InvalidRulesFile", resourceCulture);
             }
         }
         
@@ -196,11 +205,11 @@ namespace SonarQube.Plugins.Roslyn {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SQALE information cannot currently be embedded into plugins generated from package dependencies..
+        ///   Looks up a localized string similar to SQALE and customised rule xml information cannot currently be embedded into plugins generated from package dependencies..
         /// </summary>
-        public static string APG_RecurseEnabled_SQALENotEnabled {
+        public static string APG_RecurseEnabled_SQALEandRuleCustomisationNotEnabled {
             get {
-                return ResourceManager.GetString("APG_RecurseEnabled_SQALENotEnabled", resourceCulture);
+                return ResourceManager.GetString("APG_RecurseEnabled_SQALEandRuleCustomisationNotEnabled", resourceCulture);
             }
         }
         
@@ -224,6 +233,20 @@ namespace SonarQube.Plugins.Roslyn {
         
         /// <summary>
         ///   Looks up a localized string similar to 
+        ///Rules definitions: a template rules xml file for the analyzer was saved to {0}. To customise the rules definitions for the analyzer:
+        /// * rename the file
+        /// * edit the rules definitions in the file
+        /// * re-run this generator specifying the rules xml file to use with the /rules:[filename] argument.
+        ///.
+        /// </summary>
+        public static string APG_TemplateRuleFileGenerated {
+            get {
+                return ResourceManager.GetString("APG_TemplateRuleFileGenerated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
         ///SQALE: an empty SQALE file for the analyzer was saved to {0}. To provide SQALE remediation information for the analyzer:
         /// * rename the file
         /// * fill in the appropriate remediation information for each diagnostic
@@ -242,6 +265,24 @@ namespace SonarQube.Plugins.Roslyn {
         public static string APG_UnsupportedLanguage {
             get {
                 return ResourceManager.GetString("APG_UnsupportedLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Using the supplied rules xml file: {0}.
+        /// </summary>
+        public static string APG_UsingSuppliedRulesFile {
+            get {
+                return ResourceManager.GetString("APG_UsingSuppliedRulesFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Using the SQALE file: {0}.
+        /// </summary>
+        public static string APG_UsingSuppliedSqaleFile {
+            get {
+                return ResourceManager.GetString("APG_UsingSuppliedSqaleFile", resourceCulture);
             }
         }
         

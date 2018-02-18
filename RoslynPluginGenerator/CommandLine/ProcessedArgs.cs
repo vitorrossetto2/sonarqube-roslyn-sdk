@@ -25,15 +25,14 @@ namespace SonarQube.Plugins.Roslyn.CommandLine
 {
     public class ProcessedArgs
     {
-        private readonly string packageId;
-        private readonly SemanticVersion packageVersion;
-        private readonly string sqaleFilePath;
-        private readonly string language;
-        private readonly bool acceptLicenses;
-        private readonly bool recurseDependencies;
-        private readonly string outputDirectory;
-
-        public ProcessedArgs(string packageId, SemanticVersion packageVersion, string language, string sqaleFilePath, bool acceptLicenses, bool recurseDependencies, string outputDirectory)
+        public ProcessedArgs(string packageId,
+            SemanticVersion packageVersion, 
+            string language,
+            string sqaleFilePath,
+            string ruleFilePath,
+            bool acceptLicenses,
+            bool recurseDependencies,
+            string outputDirectory)
         {
             if (string.IsNullOrWhiteSpace(packageId))
             {
@@ -46,27 +45,30 @@ namespace SonarQube.Plugins.Roslyn.CommandLine
                 throw new ArgumentNullException("outputDirectory");
             }
 
-            this.packageId = packageId;
-            this.packageVersion = packageVersion;
-            this.sqaleFilePath = sqaleFilePath; // can be null
-            this.language = language;
-            this.acceptLicenses = acceptLicenses;
-            this.recurseDependencies = recurseDependencies;
-            this.outputDirectory = outputDirectory;
+            this.PackageId = packageId;
+            this.PackageVersion = packageVersion;
+            this.SqaleFilePath = sqaleFilePath; // can be null
+            this.RuleFilePath = ruleFilePath; // can be null
+            this.Language = language;
+            this.AcceptLicenses = acceptLicenses;
+            this.RecurseDependencies = recurseDependencies;
+            this.OutputDirectory = outputDirectory;
         }
 
-        public string PackageId { get { return this.packageId; } }
+        public string PackageId { get; }
 
-        public SemanticVersion PackageVersion { get { return this.packageVersion; } }
+        public SemanticVersion PackageVersion { get; }
 
-        public string SqaleFilePath {  get { return this.sqaleFilePath; } }
+        public string SqaleFilePath { get; }
 
-        public string Language { get { return this.language; } }
+        public string RuleFilePath { get; }
 
-        public bool AcceptLicenses { get { return this.acceptLicenses; } }
+        public string Language { get; }
 
-        public bool RecurseDependencies { get { return this.recurseDependencies; } }
+        public bool AcceptLicenses { get; }
 
-        public string OutputDirectory { get { return this.outputDirectory; } }
+        public bool RecurseDependencies { get; }
+
+        public string OutputDirectory { get; }
     }
 }

@@ -18,12 +18,10 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using SonarQube.Plugins.Common;
-using SonarQube.Common;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Xml.Serialization;
+using SonarQube.Plugins.Common;
 
 namespace SonarQube.Plugins.Roslyn
 {
