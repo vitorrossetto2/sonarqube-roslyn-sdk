@@ -43,6 +43,7 @@ namespace SonarQube.Plugins.Roslyn.RuleGeneratorTests
                 Severity = "CRITICAL",
                 Cardinality = "SINGLE",
                 Status = "READY",
+                Type = IssueType.CODE_SMELL,
                 Tags = new[] { "t1", "t2" }  
             });
 
@@ -54,6 +55,7 @@ namespace SonarQube.Plugins.Roslyn.RuleGeneratorTests
                 Description = @"<p>An Html <a href=""www.bing.com""> Description",
                 Severity = "MAJOR",
                 Cardinality = "SINGLE",
+                Type = IssueType.BUG,
                 Status = "READY",
             });
 
@@ -76,6 +78,7 @@ namespace SonarQube.Plugins.Roslyn.RuleGeneratorTests
     <severity>CRITICAL</severity>
     <cardinality>SINGLE</cardinality>
     <status>READY</status>
+    <type>CODE_SMELL</type>
     <tag>t1</tag>
     <tag>t2</tag>
   </rule>
@@ -87,6 +90,7 @@ namespace SonarQube.Plugins.Roslyn.RuleGeneratorTests
     <severity>MAJOR</severity>
     <cardinality>SINGLE</cardinality>
     <status>READY</status>
+    <type>BUG</type>
   </rule>
 </rules>";
 
