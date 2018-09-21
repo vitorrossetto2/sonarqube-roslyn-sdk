@@ -37,6 +37,7 @@ namespace SonarQube.Plugins.Roslyn
 
         private static int Main(string[] args)
         {
+            args = new string[] { "/a:PascalCaseClassAnalyser:1.0.0" };
             ConsoleLogger logger = new ConsoleLogger();
             Utilities.LogAssemblyVersion(typeof(Program).Assembly, UIResources.Program_AssemblyDescription, logger);
             Utilities.LogAssemblyVersion(typeof(DiagnosticAnalyzer).Assembly, UIResources.Program_SupportedRoslynVersion, logger);
